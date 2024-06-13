@@ -15,20 +15,18 @@ const Hero = () => {
         <div className="mx-auto max-w-c-1390 px-4 md:px-8 2xl:px-0">
           <div className="flex lg:items-center lg:gap-8 xl:gap-32.5">
             <div className=" md:w-1/2">
-              <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
+              {/* <h4 className="mb-4.5 text-lg font-medium text-black dark:text-white">
                 🔥 Solid - A Complete SaaS Web Template
-              </h4>
+              </h4> */}
               <h1 className="mb-5 pr-16 text-3xl font-bold text-black dark:text-white xl:text-hero ">
-                Free Next.js Template for {"   "}
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
-                  SaaS
+                  LuminaCortex 🔥
                 </span>
+                   Pioneering Advanced AI Solutions for Tomorrow's Challenges{"   "}
+
               </h1>
               <p>
-                Solid Pro - Packed with all the key integrations you need for
-                swift SaaS startup launch, including - Auth, Database, Sanity
-                Blog, Essential Components, Pages and More. Built-winth -
-                Next.js 13, React 18 and TypeScript.
+              LuminaCortex is at the forefront of the artificial intelligence revolution, offering state-of-the-art AI solutions tailored to meet the unique needs of diverse industries. Our mission is to drive innovation and excellence through the application of advanced AI technologies.
               </p>
 
               <div className="mt-10">

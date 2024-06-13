@@ -29,7 +29,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed left-0 top-0 z-99999 w-full py-7 ${
+      className={`fixed left-0 top-0 z-99999 w-full py-7  ${
         stickyMenu
           ? "bg-white !py-4 shadow transition duration-100 dark:bg-black"
           : ""
@@ -37,6 +37,9 @@ const Header = () => {
     >
       <div className="relative mx-auto max-w-c-1390 items-center justify-between px-4 md:px-8 xl:flex 2xl:px-0">
         <div className="flex w-full items-center justify-between xl:w-1/4">
+
+          {/* LOGO  */}
+          
           <a href="/">
             <Image
               src="/images/logo/logo-dark.svg"
@@ -154,18 +157,18 @@ const Header = () => {
           <div className="mt-7 flex items-center gap-6 xl:mt-0">
             <ThemeToggler />
 
-            <Link
+            {/* <Link
               href="https://github.com/NextJSTemplates/solid-nextjs"
               className="text-regular font-medium text-waterloo hover:text-primary"
             >
               GitHub Repo 🌟
-            </Link>
+            </Link> */}
 
             <Link
-              href="https://nextjstemplates.com/templates/solid"
+              href="https://github.com/Rajat78pq/LuminaCortex.git"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
-              Get Pro 🔥
+              Github Repo 🌟
             </Link>
           </div>
         </div>

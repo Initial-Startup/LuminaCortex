@@ -26,7 +26,7 @@ export default function RootLayout({
         >
           <Lines />
           <Header />
-          <ToasterContext />
+          {/* <ToasterContext /> */}
           {children}
           <Footer />
           <ScrollToTop />

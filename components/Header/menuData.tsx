@@ -9,24 +9,74 @@ const menuData: Menu[] = [
   },
   {
     id: 2,
-    title: "Features",
+    title: "Services",
     newTab: false,
-    path: "/#features",
+    submenu: [
+      {
+        id: 10,
+        title: "App Rewrite",
+        newTab: false,
+        path: "/services/appRewrite",
+      },
+      {
+        id: 11,
+        title: "Chat Bot",
+        newTab: false,
+        path: "/auth/signin",
+      },
+      {
+        id: 12,
+        title: "Generative Ai Integration",
+        newTab: false,
+        path: "/auth/signup",
+      },
+      {
+        id: 13,
+        title: "AR & VR Services",
+        newTab: false,
+        path: "/docs",
+      },
+    ]
   },
   {
-    id: 2.1,
-    title: "Blog",
+    id: 3,
+    title: "Products",
     newTab: false,
-    path: "/blog",
+    submenu: [
+      {
+        id: 20,
+        title: "App Rewrite",
+        newTab: false,
+        path: "/blog",
+      },
+      {
+        id: 21,
+        title: "Chart Bot",
+        newTab: false,
+        path: "/auth/signin",
+      },
+      {
+        id: 22,
+        title: "Generative Ai Integration",
+        newTab: false,
+        path: "/auth/signup",
+      },
+      {
+        id: 23,
+        title: "AR VR Services",
+        newTab: false,
+        path: "/docs",
+      },
+    ]
   },
   {
-    id: 2.3,
+    id: 4,
     title: "Docs",
     newTab: false,
     path: "/docs",
   },
   {
-    id: 3,
+    id: 5,
     title: "Pages",
     newTab: false,
     submenu: [
@@ -56,7 +106,7 @@ const menuData: Menu[] = [
       },
       {
         id: 35.1,
-        title: "Support",
+        title: "Contact Us",
         newTab: false,
         path: "/support",
       },
@@ -70,8 +120,8 @@ const menuData: Menu[] = [
   },
 
   {
-    id: 4,
-    title: "Support",
+    id: 6,
+    title: "Contact Us",
     newTab: false,
     path: "/support",
   },
