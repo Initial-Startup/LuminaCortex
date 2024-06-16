@@ -2,8 +2,10 @@ import { BackgroundBeams } from "@/components/ui/background-beams";
 import { CardContainer, CardBody, CardItem } from "@/components/ui/3d-card";
 import Image from "next/image";
 import Link from "next/link";
+import { TextGenerateEffect } from "@/components/ui/text-generate-effect";
 
 const ServicePageRewrite = () => {
+  const words = `Is your current website struggling with slow performance, poor responsiveness, or outdated design? Our App Rewrite service is designed to breathe new life into your existing web application. We specialize in transforming old, inefficient websites into modern, high-performance applications that look great and work seamlessly on all devices.`
   return (
     <>
       <section className="mt-30 pt-5 h-auto dark:bg-black bg-white">
@@ -13,7 +15,7 @@ const ServicePageRewrite = () => {
               <h1 className="relative mt-28 max-w-c-1016 ml-21 z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600 font-sans font-bold">
                 App Re-Write Services
               </h1>
-              <p className="mt-5 max-w-c-1016 ml-21 z-10">Is your current website struggling with slow performance, poor responsiveness, or outdated design? Our App Rewrite service is designed to breathe new life into your existing web application. We specialize in transforming old, inefficient websites into modern, high-performance applications that look great and work seamlessly on all devices.</p>
+              <TextGenerateEffect className="ml-20 text-sm" words={words} />
             </div>
             <div className="max-h-full left-48 max-w-c-1154 relative 2xl:-mr-7.5">
               <Image
@@ -273,7 +275,7 @@ const ServicePageRewrite = () => {
                 translateZ="50"
                 className="text-xl font-bold text-neutral-600 dark:text-white"
               >
-                Search Engine Optimization 
+                Search Engine Optimization
               </CardItem>
               <CardItem
                 as="p"
