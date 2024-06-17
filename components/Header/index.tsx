@@ -165,10 +165,10 @@ const Header = () => {
             </Link> */}
 
             <Link
-              href="https://github.com/Rajat78pq/LuminaCortex.git"
+              href="/support"
               className="flex items-center justify-center rounded-full bg-primary px-7.5 py-2.5 text-regular text-white duration-300 ease-in-out hover:bg-primaryho"
             >
-              Github Repo 🌟
+              Contact Us
             </Link>
           </div>
         </div>
