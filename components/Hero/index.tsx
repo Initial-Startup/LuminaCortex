@@ -22,7 +22,7 @@ const Hero = () => {
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg dark:before:bg-titlebgdark ">
                   LuminaCortex 🔥
                 </span>
-                   Pioneering Advanced AI Solutions for Tomorrow's Challenges{"   "}
+                   Pioneering Advanced Solutions for Tomorrow's Challenges{"   "}
 
               </h1>
               <p>

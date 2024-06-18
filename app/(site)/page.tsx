@@ -12,6 +12,7 @@ import Pricing from "@/components/Pricing";
 import Contact from "@/components/Contact";
 import Blog from "@/components/Blog";
 import Testimonial from "@/components/Testimonial";
+import ProductHighlights from "@/components/productHighlights";
 
 export const metadata: Metadata = {
   title: "LuminaCortexLuminaCortex - Pioneering Advanced AI Solutions for Tomorrow's Challenges",
@@ -28,6 +29,7 @@ export default function Home() {
       <About />
       <FeaturesTab />
       <FunFact />
+      <ProductHighlights />
       <Integration />
       <CTA />
       <FAQ />

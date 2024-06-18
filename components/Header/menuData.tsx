@@ -38,37 +38,37 @@ const menuData: Menu[] = [
       },
     ]
   },
-  {
-    id: 3,
-    title: "Products",
-    newTab: false,
-    submenu: [
-      {
-        id: 20,
-        title: "App Rewrite",
-        newTab: false,
-        path: "/blog",
-      },
-      {
-        id: 21,
-        title: "Chart Bot",
-        newTab: false,
-        path: "/auth/signin",
-      },
-      {
-        id: 22,
-        title: "Generative Ai Integration",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 23,
-        title: "AR VR Services",
-        newTab: false,
-        path: "/docs",
-      },
-    ]
-  },
+  // {
+  //   id: 3,
+  //   title: "Products",
+  //   newTab: false,
+  //   submenu: [
+  //     {
+  //       id: 20,
+  //       title: "App Rewrite",
+  //       newTab: false,
+  //       path: "/blog",
+  //     },
+  //     {
+  //       id: 21,
+  //       title: "Chart Bot",
+  //       newTab: false,
+  //       path: "/auth/signin",
+  //     },
+  //     {
+  //       id: 22,
+  //       title: "Generative Ai Integration",
+  //       newTab: false,
+  //       path: "/auth/signup",
+  //     },
+  //     {
+  //       id: 23,
+  //       title: "AR VR Services",
+  //       newTab: false,
+  //       path: "/docs",
+  //     },
+  //   ]
+  // },
   {
     id: 4,
     title: "About",
