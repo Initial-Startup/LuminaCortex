@@ -80,7 +80,7 @@ const Aichatbot = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <div className="h-[55rem] xl:h-[45rem] flex justify-center mt-10">
-                <div className="w-[90%] xl:h-[40rem] h-[50rem] bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
+                <div className="w-[90%] xl:h-[40rem] h-[50rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
                   <h3 className="px-5 pt-8 text-2xl font-bold">Customer Support</h3>
                   <Image
                     src="/images/services/customerSupport.svg"
@@ -134,7 +134,7 @@ const Aichatbot = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <div className="h-[50rem] xl:h-[45rem] flex justify-center mt-10">
-                <div className="w-[90%] h-[46rem] xl:h-[40rem] bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
+                <div className="w-[90%] h-[46rem] xl:h-[40rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
                   <h3 className="px-5 pt-8 text-2xl font-bold">Personal Assistant</h3>
                   <Image
                     src="/images/services/personalAssi.svg"
@@ -211,7 +211,7 @@ const Aichatbot = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <div className="h-[55rem] xl:h-[45rem] flex justify-center mt-10">
-                <div className="w-[90%] xl:h-[40rem] h-[50rem] bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
+                <div className="w-[90%] xl:h-[40rem] h-[50rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
                   <h3 className="px-5 pt-8 text-2xl font-bold">In-Vehicle Assistance</h3>
                   <Image
                     src="/images/services/vehicleassi.svg"
