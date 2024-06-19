@@ -29,21 +29,20 @@ const ProductHighlights = () => {
               className="animate_left md:w-1/2"
             >
               <h4 className="font-medium uppercase text-black dark:text-white">
-                Launch Your SaaS Fast
+              currently launching a new product
               </h4>
               <h2 className="relative mb-6 text-3xl font-bold text-black dark:text-white xl:text-hero">
-                Packed with All Essential {"   "}
+                 
                 <span className="relative inline-block before:absolute before:bottom-2.5 before:left-0 before:-z-1 before:h-3 before:w-full before:bg-titlebg2 dark:before:bg-titlebgdark">
-                  Integrations
+                MailMotion
                 </span>
               </h2>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
-                ultricies lacus non fermentum ultrices. Fusce consectetur le.
+              Introducing MailMotion, the revolutionary AI-based solution that transforms your written email text into personalized video messages featuring your voice and lip-syncing. Say goodbye to impersonal emails and hello to a more engaging way to communicate with your clients. MailMotion converts your email content into dynamic video messages by replicating your voice and synchronizing it with a digital representation of your face. This advanced AI technology ensures a natural lip-sync experience, creating professional and personalized video messages that feel like face-to-face conversations. With easy integration into major email platforms, MailMotion enhances engagement, saves time on video production, and strengthens client relationships. Ideal for sales professionals, customer support, marketing teams, and executives, MailMotion makes your communications more compelling and memorable. Transform your written words into powerful video messages with MailMotion and elevate your client interactions to a whole new level!
               </p>
               <div>
                 <a
-                  href="#"
+                  href="https://rejo-sales-inc.vercel.app/"
                   className="group mt-7.5 inline-flex items-center gap-2.5 text-black hover:text-primary dark:text-white dark:hover:text-primary"
                 >
                   <span className="duration-300 group-hover:pr-2">
