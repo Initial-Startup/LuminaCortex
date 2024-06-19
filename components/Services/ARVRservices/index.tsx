@@ -7,10 +7,10 @@ import content from "./content";
 
 const ARandVR = () => {
     return (
-        <div className="relative">
+        <div className="relative w-full overflow-x-hidden">
             <HeroParallax products={products} />
-            <div className="pt-20 flex flex-col justify-center items-center h-auto xl:justify-center">
-                <h3 className=" text-center text-black dark:text-white text-3xl font-bold xl:text-5xl xl:w-[70%]">
+            <div className="pt-20 flex flex-col justify-center items-center h-auto xl:justify-center xl:mt-20">
+                <h3 className=" text-center text-black dark:text-white text-3xl font-bold xl:text-4xl xl:w-[70%]">
                     Enhance Customer Experiences and Empower Business through Elite AR & VR Services
                 </h3>
                 <div className="h-[80rem] xl:h-auto gap-10 pt-10 w-full px-5 flex flex-col justify-center gird xl:flex-row">

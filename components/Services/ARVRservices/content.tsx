@@ -85,7 +85,7 @@ const content = [
         content: (
           <div className="h-full w-full  flex items-center justify-center text-white">
           <Image
-            src="/images/services/meting.jpg"
+            src="/images/services/meeting.jpg"
             width={600}
             height={600}
             className="h-full w-full object-cover"

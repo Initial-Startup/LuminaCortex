@@ -37,7 +37,7 @@ const Aichatbot = () => {
   return (
     <section className="py-20">
       <div className="xl:h-[30rem] h-[10rem] mt-20 flex justify-center items-center">
-        <TypewriterEffect className="text-3xl xl:text-[4rem]" words={words} />
+        <TypewriterEffect className="text-3xl xl:text-[4rem] xl:w-[60%]" words={words} />
       </div>
       <div className="h-[30rem] flex justify-center items-center xl:h-[50rem]">
         <Image
@@ -61,7 +61,7 @@ const Aichatbot = () => {
       <div className="h-auto">
         {/* first section  */}
         <div className="h-auto flex flex-col xl:flex-row xl:justify-center xl:items-center">
-          <div className="h-[20rem] flex-col flex justify-center items-center xl:h-[40rem]">
+          <div className="h-[20rem] flex-col flex justify-center items-center xl:mt-20 xl:h-[40rem]">
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <Image
                 src="/images/services/aichatimg2nd.svg"
@@ -125,6 +125,8 @@ const Aichatbot = () => {
           </div>
         </div>
 
+        {/* second section  */}
+        
         <div className="h-auto flex flex-col xl:flex-row xl:justify-center xl:items-center xl:mt-[15rem]">
           <div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
@@ -134,7 +136,7 @@ const Aichatbot = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <div className="h-[50rem] xl:h-[45rem] flex justify-center mt-10">
-                <div className="w-[90%] h-[46rem] xl:h-[40rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
+                <div className="w-[90%] h-[46rem] xl:h-[35rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
                   <h3 className="px-5 pt-8 text-2xl font-bold">Personal Assistant</h3>
                   <Image
                     src="/images/services/personalAssi.svg"
@@ -173,7 +175,6 @@ const Aichatbot = () => {
                   </div>
                 </div>
               </div>
-
             </motion.div>
           </div>
           <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
@@ -189,7 +190,7 @@ const Aichatbot = () => {
           </motion.div>
         </div>
 
-
+        {/* third section  */}
 
         <div className="h-auto flex flex-col xl:flex-row xl:justify-center xl:items-center xl:mt-[15rem]">
           <div className="h-[20rem] flex-col flex justify-center items-center xl:h-[40rem]">
@@ -211,7 +212,7 @@ const Aichatbot = () => {
             </motion.div>
             <motion.div initial={{ opacity: 0, y: -30 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 1.5, delay: 0.8 }} viewport={{ once: true }}>
               <div className="h-[55rem] xl:h-[45rem] flex justify-center mt-10">
-                <div className="w-[90%] xl:h-[40rem] h-[50rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
+                <div className="w-[90%] xl:h-[33rem] h-[50rem] bg-white dark:bg-black text-black dark:text-white rounded-3xl border-2 border-solid border-slate-800 my-5">
                   <h3 className="px-5 pt-8 text-2xl font-bold">In-Vehicle Assistance</h3>
                   <Image
                     src="/images/services/vehicleassi.svg"
