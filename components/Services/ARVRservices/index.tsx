@@ -13,11 +13,11 @@ const ARandVR = () => {
                 <h3 className=" text-center text-black dark:text-white text-3xl font-bold xl:text-4xl xl:w-[70%]">
                     Enhance Customer Experiences and Empower Business through Elite AR & VR Services
                 </h3>
-                <div className="h-[80rem] xl:h-auto gap-10 pt-10 w-full px-5 flex flex-col justify-center gird xl:flex-row">
-                    <HoverImage src={"/images/services/arvr12.jpg"} alt="AR & VR" text="AR & VR Game Development 2D, 3D and Isometric games" />
-                    <HoverImage src={"/images/services/vreducation.jpg"} alt="AR & VR" text="Education 3D Visual Animations | Intractions & Clicks" />
-                    <HoverImage src={"/images/services/manufacture car.webp"} alt="AR & VR" text="Manufacturing Digital Models | Design Insights" />
-                    <HoverImage src={"/images/services/travel.png"} alt="AR & VR" text="Trevel Interactive Experiences" />
+                <div className="h-[80rem] xl:h-auto gap-5 pt-10 w-full px-5 flex flex-col justify-center gird xl:flex-row">
+                    <HoverImage src={"/images/services/gaming.jpg"} alt="AR & VR" text="AR & VR Game Development 2D, 3D and Isometric games" />
+                    <HoverImage src={"/images/services/education.jpg"} alt="AR & VR" text="Education 3D Visual Animations | Intractions & Clicks" />
+                    <HoverImage src={"/images/services/furnitures.jpg"} alt="AR & VR" text="Experience luxury furniture using AR on your mobile | before purchase" />
+                    <HoverImage src={"/images/services/travel.png"} alt="AR & VR" text="Travel Interactive Experiences" />
                 </div>
                 <div className="pt-10 mt-5">
                 <StickyScroll content={content} />

@@ -94,7 +94,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/comingsoon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Product
@@ -102,7 +102,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/comingsoon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Careers
@@ -110,7 +110,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/comingsoon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Pricing
@@ -118,6 +118,66 @@ const Footer = () => {
                     </li>
                   </ul>
                 </motion.div>
+
+
+                <motion.div
+                  variants={{
+                    hidden: {
+                      opacity: 0,
+                      y: -20,
+                    },
+
+                    visible: {
+                      opacity: 1,
+                      y: 0,
+                    },
+                  }}
+                  initial="hidden"
+                  whileInView="visible"
+                  transition={{ duration: 1, delay: 0.1 }}
+                  viewport={{ once: true }}
+                  className="animate_top"
+                >
+                  <h4 className="mb-9 text-itemtitle2 font-medium text-black dark:text-white">
+                    Services
+                  </h4>
+
+                  <ul>
+                    <li>
+                      <a
+                        href="/services/appRewrite"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        App Rewrite
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/services/aiChatbot"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Chat Bot
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/services/aiintegration"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        Generative Ai Integration
+                      </a>
+                    </li>
+                    <li>
+                      <a
+                        href="/services/arvrservice"
+                        className="mb-3 inline-block hover:text-primary"
+                      >
+                        AR & VR Services
+                      </a>
+                    </li>
+                  </ul>
+                </motion.div>
+
 
                 <motion.div
                   variants={{
@@ -160,7 +220,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/comingsoon"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Our Blog
@@ -168,7 +228,7 @@ const Footer = () => {
                     </li>
                     <li>
                       <a
-                        href="#"
+                        href="/support"
                         className="mb-3 inline-block hover:text-primary"
                       >
                         Contact Us
