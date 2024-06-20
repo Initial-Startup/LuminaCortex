@@ -8,7 +8,7 @@ const ServicePageRewrite = () => {
   const words = `Is your current website struggling with slow performance, poor responsiveness, or outdated design? Our App Rewrite service is designed to breathe new life into your existing web application. We specialize in transforming old, inefficient websites into modern, high-performance applications that look great and work seamlessly on all devices.`
   return (
     <>
-      <section className="mt-30 pt-5 h-auto dark:bg-black bg-white">
+      <section className="pt-30 h-auto dark:bg-black bg-white">
   <div className="h-auto lg:h-[40rem] w-full rounded-md dark:bg-black bg-white relative flex flex-col justify-center antialiased">
     <div className="flex flex-col lg:flex-row relative">
       <div className="relative flex flex-col max-w-c-1016">

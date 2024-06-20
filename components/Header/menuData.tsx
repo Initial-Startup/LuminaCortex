@@ -28,7 +28,7 @@ const menuData: Menu[] = [
         id: 12,
         title: "Generative Ai Integration",
         newTab: false,
-        path: "/docs",
+        path: "/services/aiintegration",
       },
       {
         id: 13,
