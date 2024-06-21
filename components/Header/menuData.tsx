@@ -20,18 +20,24 @@ const menuData: Menu[] = [
       },
       {
         id: 11,
+        title: "UI & UX Design",
+        newTab: false,
+        path: "/services/uiuxdesign",
+      },
+      {
+        id: 12,
         title: "Chat Bot",
         newTab: false,
         path: "/services/aiChatbot",
       },
       {
-        id: 12,
+        id: 13,
         title: "Generative Ai Integration",
         newTab: false,
         path: "/services/aiintegration",
       },
       {
-        id: 13,
+        id: 14,
         title: "AR & VR Services",
         newTab: false,
         path: "/services/arvrservice",
