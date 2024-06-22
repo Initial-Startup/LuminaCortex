@@ -4,7 +4,7 @@ const faqData: FAQ[] = [
   {
     id: 1,
     quest: "What services do you offer?",
-    ans: "We offer a range of services including AI solutions & Ai Applications, app rewriting, and AR/VR development.",
+    ans: "We offer a range of services including AI solutions & Ai Applications, app rewriting, UI/UX design, and AR/VR development.",
   },
   {
     id: 2,

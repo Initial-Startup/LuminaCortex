@@ -28,7 +28,7 @@ const Footer = () => {
                 viewport={{ once: true }}
                 className="animate_top w-1/2 lg:w-1/4"
               >
-                <a href="index.html" className="relative">
+                {/* <a href="index.html" className="relative">
                   <Image
                     width={110}
                     height={80}
@@ -43,11 +43,11 @@ const Footer = () => {
                     alt="Logo"
                     className="hidden dark:block"
                   />
-                </a>
+                </a> */}
 
-                <p className="mb-10 mt-5">
+                {/* <p className="mb-10 mt-5">
                   Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                </p>
+                </p> */}
 
                 <p className="mb-1.5 text-sectiontitle uppercase tracking-[5px]">
                   contact
