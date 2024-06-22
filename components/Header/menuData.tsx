@@ -81,49 +81,49 @@ const menuData: Menu[] = [
     newTab: false,
     path: "/about",
   },
-  {
-    id: 5,
-    title: "Pages",
-    newTab: false,
-    submenu: [
-      {
-        id: 31,
-        title: "Blog Grid",
-        newTab: false,
-        path: "/blog",
-      },
-      {
-        id: 34,
-        title: "Sign In",
-        newTab: false,
-        path: "/auth/signin",
-      },
-      {
-        id: 35,
-        title: "Sign Up",
-        newTab: false,
-        path: "/auth/signup",
-      },
-      {
-        id: 36,
-        title: "Docs",
-        newTab: false,
-        path: "/docs",
-      },
-      {
-        id: 37,
-        title: "Contact Us",
-        newTab: false,
-        path: "/support",
-      },
-      {
-        id: 38,
-        title: "404",
-        newTab: false,
-        path: "/error",
-      },
-    ],
-  },
+  // {
+  //   id: 5,
+  //   title: "Pages",
+  //   newTab: false,
+  //   submenu: [
+  //     {
+  //       id: 31,
+  //       title: "Blog Grid",
+  //       newTab: false,
+  //       path: "/blog",
+  //     },
+  //     {
+  //       id: 34,
+  //       title: "Sign In",
+  //       newTab: false,
+  //       path: "/auth/signin",
+  //     },
+  //     {
+  //       id: 35,
+  //       title: "Sign Up",
+  //       newTab: false,
+  //       path: "/auth/signup",
+  //     },
+  //     {
+  //       id: 36,
+  //       title: "Docs",
+  //       newTab: false,
+  //       path: "/docs",
+  //     },
+  //     {
+  //       id: 37,
+  //       title: "Contact Us",
+  //       newTab: false,
+  //       path: "/support",
+  //     },
+  //     {
+  //       id: 38,
+  //       title: "404",
+  //       newTab: false,
+  //       path: "/error",
+  //     },
+  //   ],
+  // },
 
   {
     id: 6,
