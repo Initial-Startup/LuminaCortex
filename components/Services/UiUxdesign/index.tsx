@@ -54,63 +54,63 @@ const UiuxDesign = () => {
                         <div className="xl:flex flex-row xl:mt-8">
                             <div className="mt-10 xl:w-[50%] xl:flex xl:justify-center xl:items-center">
                                 <div>
-                                    <h2 className="text-2xl font-bold">UI Design Process</h2>
+                                    <h2 className="text-2xl font-bold text-black dark:text-manatee">UI Design Process</h2>
                                     <div className="mt-7.5 flex items-center gap-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                            <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                            <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                 01
                                             </p>
                                         </div>
                                         <div className="w-3/4">
-                                            <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                            <h3 className="mb-0.5  text-xl text-black dark:text-manatee">
                                                 Design references
                                             </h3>
                                         </div>
                                     </div>
                                     <div className="mt-7.5 flex items-center gap-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                            <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                            <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                 02
                                             </p>
                                         </div>
                                         <div className="w-3/4">
-                                            <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                            <h3 className="mb-0.5  text-xl text-black dark:text-manatee">
                                                 Graphic interface
                                             </h3>
                                         </div>
                                     </div>
                                     <div className="mt-7.5 flex items-center gap-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                            <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                            <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                 03
                                             </p>
                                         </div>
                                         <div className="w-3/4">
-                                            <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                            <h3 className="mb-0.5  text-xl text-black dark:text-manatee">
                                                 Animation prototype
                                             </h3>
                                         </div>
                                     </div>
                                     <div className="mt-7.5 flex items-center gap-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                            <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                            <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                 04
                                             </p>
                                         </div>
                                         <div className="w-3/4">
-                                            <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                            <h3 className="mb-0.5  text-xl text-black dark:text-manatee">
                                                 UI guidelines and kit
                                             </h3>
                                         </div>
                                     </div>
                                     <div className="mt-7.5 flex items-center gap-5">
                                         <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                            <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                            <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                 05
                                             </p>
                                         </div>
                                         <div className="w-3/4">
-                                            <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                            <h3 className="mb-0.5  text-xl text-black dark:text-manatee">
                                                 Design review
                                             </h3>
                                         </div>
@@ -120,63 +120,63 @@ const UiuxDesign = () => {
                             <div className="xl:w-[50%] xl:flex xl:justify-center xl:items-center">
                                 <div>
                                     <div className="mt-10">
-                                        <h2 className="text-2xl font-bold">UX Design Process</h2>
+                                        <h2 className="text-2xl font-bold text-black dark:text-manatee">UX Design Process</h2>
                                         <div className="mt-7.5 flex items-center gap-5">
                                             <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                                <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                                <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                     01
                                                 </p>
                                             </div>
                                             <div className="w-3/4">
-                                                <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                                <h3 className="mb-0.5 text-xl text-black dark:text-manatee">
                                                     Analysis
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="mt-7.5 flex items-center gap-5">
                                             <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                                <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                                <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                     02
                                                 </p>
                                             </div>
                                             <div className="w-3/4">
-                                                <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                                <h3 className="mb-0.5 text-xl text-black dark:text-manatee">
                                                     Interface architecture
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="mt-7.5 flex items-center gap-5">
                                             <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                                <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                                <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                     03
                                                 </p>
                                             </div>
                                             <div className="w-3/4">
-                                                <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                                <h3 className="mb-0.5 text-xl text-black dark:text-manatee">
                                                     Sketching & Wireframes
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="mt-7.5 flex items-center gap-5">
                                             <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                                <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                                <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                     04
                                                 </p>
                                             </div>
                                             <div className="w-3/4">
-                                                <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                                <h3 className="mb-0.5 text-xl text-black dark:text-manatee">
                                                     Dynamic prototype
                                                 </h3>
                                             </div>
                                         </div>
                                         <div className="mt-7.5 flex items-center gap-5">
                                             <div className="flex h-10 w-10 items-center justify-center rounded-[50%] border border-stroke dark:border-strokedark dark:bg-blacksection">
-                                                <p className="text-metatitle2 font-semibold text-black dark:text-white">
+                                                <p className="text-metatitle2 font-semibold text-black dark:text-manatee">
                                                     05
                                                 </p>
                                             </div>
                                             <div className="w-3/4">
-                                                <h3 className="mb-0.5 text-metatitle2 text-black dark:text-white">
+                                                <h3 className="mb-0.5 text-xl text-black dark:text-manatee">
                                                     Editing
                                                 </h3>
                                             </div>

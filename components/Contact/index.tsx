@@ -2,20 +2,68 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
+import { useState, useEffect} from "react";
+import Axios from "axios";
+import {Spinner} from "@nextui-org/react";
 
 const Contact = () => {
-  /**
-   * Source: https://www.joshwcomeau.com/react/the-perils-of-rehydration/
-   * Reason: To fix rehydration error
-   */
-  const [hasMounted, setHasMounted] = React.useState(false);
-  React.useEffect(() => {
-    setHasMounted(true);
-  }, []);
-  if (!hasMounted) {
-    return null;
-  }
+  //mounted
+  //   const [hasMounted, setHasMounted] = React.useState(false);
+  // React.useEffect(() => {
+  //   setHasMounted(true);
+  // }, []);
+  // if (!hasMounted) {
+  //   return null;
+  // }
+ //end mounted  
 
+//contact page connect with DB
+
+const [name, setName]=useState("");
+const [email, setEmail]=useState("");
+const [subject, setSubject]=useState("");
+const [phone, setPhone]=useState<number>();
+const [message, setMessage]=useState("");
+const [success, setSuccess]=useState(false);
+const [receivemsg, setReceiveMsg]=useState("");
+const [error, setError]=useState("");
+const [loading, setLoading]=useState(false);
+
+const sendMessage = async (e : any) => {
+  e.preventDefault();
+  console.log(name, email, subject, phone, message);
+  setLoading(true);
+  try {
+    const response = await Axios.post("/api/contact", {
+      name,
+      email,
+      subject,
+      phone,
+      message
+    },{
+      headers: {
+        "Content-Type": "application/json"
+      }
+    });
+    if(response.data.success){
+      setReceiveMsg(response.data.message);
+      setLoading(false);
+      console.log(response.data);
+    }else{
+       setError(response.data.message);
+       setLoading(false);
+       console.log(response.data);
+    }
+     setTimeout(() => {
+       setReceiveMsg("");
+       setError("");
+     }, 3000);
+  } catch (error) {
+    
+  }
+}
+
+ 
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
@@ -60,19 +108,18 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form
-                action="https://formbold.com/s/unique_form_id"
-                method="POST"
-              >
+              <form>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    onChange={(e) => setName(e.target.value)}
                     placeholder="Full name"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="email"
+                    onChange={(e) => setEmail(e.target.value)}
                     placeholder="Email address"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -81,12 +128,14 @@ const Contact = () => {
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <input
                     type="text"
+                    onChange={(e) => setSubject(e.target.value)}
                     placeholder="Subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
 
                   <input
                     type="text"
+                    onChange={(e) => setPhone(parseInt(e.target.value))}
                     placeholder="Phone number"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   />
@@ -95,13 +144,14 @@ const Contact = () => {
                 <div className="mb-11.5 flex">
                   <textarea
                     placeholder="Message"
+                    onChange={(e) => setMessage(e.target.value)}
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
                 </div>
 
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
-                  <div className="mb-4 flex md:mb-0">
+                  {/* <div className="mb-4 flex md:mb-0">
                     <input
                       id="default-checkbox"
                       type="checkbox"
@@ -131,10 +181,11 @@ const Contact = () => {
                       By clicking Checkbox, you agree to use our “Form” terms
                       And consent cookie usage in browser.
                     </label>
-                  </div>
+                  </div> */}
 
                   <button
                     aria-label="send message"
+                    onClick={sendMessage}
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
                     Send Message
@@ -151,7 +202,11 @@ const Contact = () => {
                         fill=""
                       />
                     </svg>
+                   <div>{loading ? <Spinner size="sm" color="white"/> : null}</div>
+
                   </button>
+                  <p className="text-green-500">{receivemsg}</p>
+                  <p className="text-red-500">{error}</p>
                 </div>
               </form>
             </motion.div>
