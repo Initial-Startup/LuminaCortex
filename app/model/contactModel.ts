@@ -13,9 +13,6 @@ const contactSchema = new Schema({
         required:true,
         match:[/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/,"Email is not valid"]
     },
-    subject:{
-        type:String,
-    },
     phone:{
         type:Number,
         required:true,
@@ -26,7 +23,7 @@ const contactSchema = new Schema({
         type:String,
         required:true,
         minlenhgt:[5,"Message must be at least 5 characters long"],
-        maxlength:[500,"Message must be at most 500 characters long"]
+        maxlength:[500,"Message must be at most 500 characters long"],
     }
 });
 

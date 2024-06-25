@@ -31,13 +31,19 @@ const [loading, setLoading]=useState(false);
 
 const sendMessage = async (e : any) => {
   e.preventDefault();
-  console.log(name, email, subject, phone, message);
   setLoading(true);
+  if(!name || !email || !phone || !message){
+    setError("All fields are required");
+    setLoading(false);
+    setTimeout(() => {
+      setError("");
+    }, 3000);
+    return;
+  }
   try {
     const response = await Axios.post("/api/contact", {
       name,
       email,
-      subject,
       phone,
       message
     },{
@@ -126,18 +132,18 @@ const sendMessage = async (e : any) => {
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
+                  {/* <input
                     type="text"
                     onChange={(e) => setSubject(e.target.value)}
                     placeholder="Subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
-                  />
+                  /> */}
 
                   <input
                     type="text"
                     onChange={(e) => setPhone(parseInt(e.target.value))}
                     placeholder="Phone number"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
+                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white "
                   />
                 </div>
 

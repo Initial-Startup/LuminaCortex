@@ -5,14 +5,13 @@ import mongoose from "mongoose";
 import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
-    const { name, email, subject, phone, message } = await request.json();
+    const { name, email, phone, message } = await request.json();
      
         try {
             await connectDB();
             await Contact.create({
                 name,
                 email,
-                subject,
                 phone,
                 message
             })
