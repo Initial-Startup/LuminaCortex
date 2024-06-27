@@ -2,9 +2,13 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import React from "react";
-import { useState, useEffect} from "react";
+import { useState, useEffect } from "react";
 import Axios from "axios";
-import {Spinner} from "@nextui-org/react";
+import { Spinner } from "@nextui-org/react";
+import { useForm } from "react-hook-form"
+import { yupResolver } from "@hookform/resolvers/yup"
+import userSchema from "./Validation/userSchema"
+import { UserSchemaType } from "./Validation/userSchema"
 
 const Contact = () => {
   //mounted
@@ -15,61 +19,67 @@ const Contact = () => {
   // if (!hasMounted) {
   //   return null;
   // }
- //end mounted  
+  //end mounted  
 
-//contact page connect with DB
+  //contact page connect with DB
 
-const [name, setName]=useState("");
-const [email, setEmail]=useState("");
-const [subject, setSubject]=useState("");
-const [phone, setPhone]=useState<number>();
-const [message, setMessage]=useState("");
-const [success, setSuccess]=useState(false);
-const [receivemsg, setReceiveMsg]=useState("");
-const [error, setError]=useState("");
-const [loading, setLoading]=useState(false);
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [subject, setSubject] = useState("");
+  const [phone, setPhone] = useState<number>();
+  const [message, setMessage] = useState("");
+  const [success, setSuccess] = useState(false);
+  const [receivemsg, setReceiveMsg] = useState("");
+  const [error, setError] = useState("");
+  const [loading, setLoading] = useState(false);
 
-const sendMessage = async (e : any) => {
-  e.preventDefault();
-  setLoading(true);
-  if(!name || !email || !phone || !message){
-    setError("All fields are required");
-    setLoading(false);
-    setTimeout(() => {
-      setError("");
-    }, 3000);
-    return;
-  }
-  try {
-    const response = await Axios.post("/api/contact", {
-      name,
-      email,
-      phone,
-      message
-    },{
-      headers: {
-        "Content-Type": "application/json"
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm<UserSchemaType>({
+    resolver: yupResolver(userSchema),
+  })
+  // const onSubmit = (data: UserSchemaType) => console.log(data)
+
+
+  const onSubmit = async (e: any, data: UserSchemaType) => {
+    e.preventDefault();
+    setLoading(true);
+
+
+
+    try {
+      const response = await Axios.post("/api/contact", {
+        name,
+        email,
+        phone,
+        message
+      }, {
+        headers: {
+          "Content-Type": "application/json"
+        }
+      });
+      if (response.data.success) {
+        setReceiveMsg(response.data.message);
+        setLoading(false);
+        console.log(response.data);
+      } else {
+        setError(response.data.message);
+        setLoading(false);
+        console.log(response.data);
       }
-    });
-    if(response.data.success){
-      setReceiveMsg(response.data.message);
-      setLoading(false);
-      console.log(response.data);
-    }else{
-       setError(response.data.message);
-       setLoading(false);
-       console.log(response.data);
-    }
-     setTimeout(() => {
-       setReceiveMsg("");
-       setError("");
-     }, 3000);
-  } catch (error) {
-    
-  }
-}
+      setTimeout(() => {
+        setReceiveMsg("");
+        setError("");
+      }, 3000);
+    } catch (error) {
 
- 
+    }
+  }
+
+
   return (
     <>
       {/* <!-- ===== Contact Start ===== --> */}
@@ -114,21 +124,29 @@ const sendMessage = async (e : any) => {
                 Send a message
               </h2>
 
-              <form>
+              <form onSubmit={handleSubmit(onSubmit as any)}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
-                  <input
-                    type="text"
-                    onChange={(e) => setName(e.target.value)}
-                    placeholder="Full name"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
-                  />
+                  <div className="flex flex-col gap-3.5 w-full">
+                    <input
+                      type="text"
+                      {...register("name")}
+                      onChange={(e) => setName(e.target.value)}
+                      placeholder="Full name"
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-full"
+                    />
+                    <div className="text-red-500">{errors.name?.message}</div>
+                  </div>
 
-                  <input
-                    type="email"
-                    onChange={(e) => setEmail(e.target.value)}
-                    placeholder="Email address"
-                    className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
-                  />
+                  <div className="flex flex-col gap-3.5 w-full">
+                    <input
+                      // type="email"
+                      {...register("email")}
+                      onChange={(e) => setEmail(e.target.value)}
+                      placeholder="Email address"
+                      className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-full"
+                    />
+                    <div className="text-red-500">{errors.email?.message}</div>
+                  </div>
                 </div>
 
                 <div className="mb-12.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
@@ -138,22 +156,29 @@ const sendMessage = async (e : any) => {
                     placeholder="Subject"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white lg:w-1/2"
                   /> */}
-
+                  <div className="flex flex-col gap-3.5 w-full">
                   <input
                     type="text"
+                    {...register("phone", { pattern: (/^[0-9]+$/) })}
                     onChange={(e) => setPhone(parseInt(e.target.value))}
                     placeholder="Phone number"
                     className="w-full border-b border-stroke bg-transparent pb-3.5 focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white "
                   />
+                  <div className="text-red-500">{errors.phone?.message}</div>
+                  </div>
                 </div>
 
                 <div className="mb-11.5 flex">
+                  <div className="flex flex-col gap-3.5 w-full">
                   <textarea
                     placeholder="Message"
+                    {...register("message")}
                     onChange={(e) => setMessage(e.target.value)}
                     rows={4}
                     className="w-full border-b border-stroke bg-transparent focus:border-waterloo focus:placeholder:text-black focus-visible:outline-none dark:border-strokedark dark:focus:border-manatee dark:focus:placeholder:text-white"
                   ></textarea>
+                  <div className="text-red-500">{errors.message?.message}</div>
+                  </div>
                 </div>
 
                 <div className="flex flex-wrap gap-4 xl:justify-between ">
@@ -191,7 +216,7 @@ const sendMessage = async (e : any) => {
 
                   <button
                     aria-label="send message"
-                    onClick={sendMessage}
+                    type="submit"
                     className="inline-flex items-center gap-2.5 rounded-full bg-black px-6 py-3 font-medium text-white duration-300 ease-in-out hover:bg-blackho dark:bg-btndark"
                   >
                     Send Message
@@ -208,7 +233,7 @@ const sendMessage = async (e : any) => {
                         fill=""
                       />
                     </svg>
-                   <div>{loading ? <Spinner size="sm" color="white"/> : null}</div>
+                    <div>{loading ? <Spinner size="sm" color="white" /> : null}</div>
 
                   </button>
                   <p className="text-green-500">{receivemsg}</p>
