@@ -22,7 +22,7 @@ export async function POST(request: Request) {
                 for(let key in error.errors){
                     errorList.push(error.errors[key].message)
                 }
-                return NextResponse.json({ success: false, message: errorList.join(", ") });
+                console.log(errorList);
                }
         }
     

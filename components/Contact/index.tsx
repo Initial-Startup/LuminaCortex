@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form"
 import { yupResolver } from "@hookform/resolvers/yup"
 import userSchema from "./Validation/userSchema"
 import { UserSchemaType } from "./Validation/userSchema"
+import { SubmitHandler } from 'react-hook-form';
 
 const Contact = () => {
   //mounted
@@ -44,18 +45,17 @@ const Contact = () => {
   // const onSubmit = (data: UserSchemaType) => console.log(data)
 
 
-  const onSubmit = async (e: any, data: UserSchemaType) => {
-    e.preventDefault();
+  const onSubmit:SubmitHandler<{name:string; email:string; phone:number; message:string;}> = async (data: UserSchemaType) => {
     setLoading(true);
 
 
 
     try {
       const response = await Axios.post("/api/contact", {
-        name,
-        email,
-        phone,
-        message
+          name,
+          email,
+          phone,
+          message
       }, {
         headers: {
           "Content-Type": "application/json"
@@ -124,7 +124,7 @@ const Contact = () => {
                 Send a message
               </h2>
 
-              <form onSubmit={handleSubmit(onSubmit as any)}>
+              <form onSubmit={handleSubmit(onSubmit)}>
                 <div className="mb-7.5 flex flex-col gap-7.5 lg:flex-row lg:justify-between lg:gap-14">
                   <div className="flex flex-col gap-3.5 w-full">
                     <input
